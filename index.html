@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css" class="css">
+</head>
+
+<body>
+  <div id="main-app">
+    <header class="header">
+      <div class="container">
+        <label class="navbar-toggle-label" for="navbar-toggle">
+          <img src="/src/Vector.png" alt="">
+        </label>
+        <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
+        <a href="" class="navbar-brand logo">
+          <img src="/src/Logo.png" alt="">
+        </a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item my-7">
+              <a href="" class="nav-link">男款</a>
+            </li>
+            <li class="nav-item my-7">
+              <a href="" class="nav-link">女款</a>
+            </li>
+            <li class="nav-item my-7">
+              <a href="" class="nav-link">最新消息</a>
+            </li>
+            <li class="nav-item my-7">
+              <a href="" class="nav-link">聯絡我們</a>
+            </li>
+            <li class="nav-item my-7">
+              <a href="" class="nav-link">客製商品</a>
+            </li>
+            <li class="nav-item my-7 nav-icons d-flex justify-content-center">
+              <a href="" class="nav-link search-icon">
+                <img src="/src/icona.png" alt="">
+              </a>
+              <a href="" class="nav-link cart-icon">
+                <img src="/src/iconb.png" alt="">
+              </a>
+              <div class="darkmode" id="dark__mode__toggle">
+                <img class='lightmode' src="/src/iconc.png" alt="">
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main mt-4">
+      <div class="h1-container">
+        <h1>結帳</h1>
+      </div>
+      <div class="container">
+        <div class="upper-content left-content">
+          <div id="step-control" class="stepper-panel">
+            <div class="stepper-container d-flex">
+              <div class="step step-one">
+                <div class="circle-container">
+                </div>
+                <div class="label-container">寄送地址</div>
+              </div>
+              <div class="step">
+                <div class="circle-container">
+                </div>
+                <div class="label-container">運送方式</div>
+                <span class="connect-line"></span>
+              </div>
+              <div class="step">
+                <div class="circle-container">
+                </div>
+                <div class="label-container">付款資訊</div>
+                <span class="connect-line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="form">
+            <div class="part part-one">
+              <h2>寄送地址</h2>
+              <div class="form-row title-name d-flex justify-content-between">
+                <div class="select-wrapper d-flex flex-column">
+                  <label>稱謂</label>
+                  <select class="title" name="a-type" id="a-type" required>
+                    <option value="" disabled selected>稱謂</option>
+                    <option value="male">先生</option>
+                    <option value="femail">小姐</option>
+                  </select>
+                </div>
+                <div class="name-wrapper d-flex flex-column">
+                  <label for="">姓名</label>
+                  <input class="name" id="name" type="text" placeholder="請輸入姓名">
+                </div>
+              </div>
+              <div class="form-row telephone-email">
+                <div class="telephone">
+                  <label for="">電話</label>
+                  <input id="phone" type="text" placeholder="請輸入行動電話">
+                </div>
+                <div class="email">
+                  <label for="">Email</label>
+                  <input id="email" type="text" placeholder="請輸入電子郵件">
+                </div>
+              </div>
+              <div class="form-row city-address">
+                <div class="city-wrapper">
+                  <label for="">縣市</label>
+                  <input id="city" type="text" placeholder="請輸入縣市">
+                </div>
+                <div class="address">
+                  <label for="">地址</label>
+                  <input id="address" type="text" placeholder="請輸入地址">
+                </div>
+              </div>
+            </div>
+            <div class="part part-two d-none">
+              <h2>運送方式</h2>
+              <div class="transport-method">
+                <input name="transport" type="radio" value="regular" class='transport'>
+                <label for="regular">標準運送</label>
+                <span>約3~4個工作天</span>
+                <span>免費</span>
+              </div>
+              <div class="transport-method dhl">
+                <input name="transport" type="radio" value="dhl" class='transport'>
+                <label for="">DHL貨運</label>
+                <span>48小時内送達</span>
+                <span>$500</span>
+              </div>
+            </div>
+            <div class="part part-three d-none">
+              <h2>付款資訊</h2>
+              <div class="form-row">
+                <label for="">持卡人姓名</label>
+                <input id="card-name" type="text" placeholder="請輸入持卡人姓名">
+              </div>
+              <div class="form-row">
+                <label for="">卡號</label>
+                <input id="card" type="text" placeholder="請輸入卡號">
+              </div>
+              <div class="form-row d-flex flex-row justify-content-between align-items-end">
+                <div class="validity-container d-flex flex-column ">
+                  <label for="">有效期限</label>
+                  <input id="validity" type="text" placeholder="MM/YY">
+                </div>
+                <div class="cvc-container d-flex flex-column">
+                  <label for="">CVC/CCV</label>
+                  <input id="cvc" type="text" placeholder="123">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lower-content right-content cart">
+          <h3 class="cart-title d-none">購物籃</h3>
+          <div class="product-panel">
+            <!-- insert from js -->
+          </div>
+          <div class="shipping d-flex justify-content-between">
+            <span class="shipping-name">運費</span>
+            <span class="shipping-total">免費</span>
+          </div>
+          <div class="amount d-flex justify-content-between">
+            <span class="amount-name">小計</span>
+            <span class="amount-total">$5,998</span>
+          </div>
+        </div>
+        <hr class='hr'>
+        <div class="control-panel">
+          <button class="btn last-step d-none">← 上一步</button>
+          <button class="btn first-next-step next-step">下一步 →</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer container justify-content-between">
+      <div class="footer-logo">
+        <a href="" class="navbar-brand logo">
+          <img src="/src/Logo.png" alt="">
+        </a>
+      </div>
+      <div class="service">
+        <h2>客戶服務</h2>
+        <ul>
+          <li><span>運送説明</span></li>
+          <li><span>退換貨相關</span></li>
+          <li><span>付款資訊</span></li>
+          <li><span>FAQ</span></li>
+        </ul>
+      </div>
+      <div class="about">
+        <h2>關於我們</h2>
+        <ul>
+          <li><span>品牌故事</span></li>
+          <li><span>媒體聯繫</span></li>
+          <li><span>Press kit</span></li>
+        </ul>
+      </div>
+      <div class="term">
+        <h2>資訊</h2>
+        <ul>
+          <li><span>隱私權政策</span></li>
+          <li><span>Cookie</span></li>
+          <li><span>GDPR</span></li>
+        </ul>
+      </div>
+      <div class="follow-us">
+        <h2>追蹤ALPHA Shop</h2>
+        <ul>
+          <li><span>+886 02123-45678</span></li>
+        </ul>
+        <div class="footer-icons">
+          <img src="src/icon1.png" alt="">
+          <img src="src/icon2.png" alt="">
+          <img src="src/icon3.png" alt="">
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <script src='dist/bundle.js'></script>
+</body>
+
+</html>
